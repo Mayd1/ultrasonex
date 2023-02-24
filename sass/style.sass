@@ -1,0 +1,1726 @@
+//General
+*
+    font-family: 'Roboto', sans-serif
+body 
+p
+    font-weight: 400
+    color: #000
+h1
+    font-weight: 300
+    font-size: 42px
+    color: #007982
+.bgfon
+    background: url('../img/fon_midl.png') 
+.container
+    max-width: 1150px
+    margin: 0 auto
+a:active,a:focus  
+    outline: none
+button:active, button:focus 
+    outline: none
+*:focus 
+    outline-style: none
+    outline-width: 0px !important
+    outline-color: none !important
+
+    // Header
+
+.header
+    margin-top: 10px
+.header-wrap
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: 17px
+.header__logo_img
+    display: block
+    margin: auto
+.header__wrap_contacts,.header__info,.header__address
+    p
+        color: #1e9382
+        font-weight: 600
+        display: flex
+    p:not(:first-child)
+        margin-top: 8px
+.header__address_metka:before
+    background: url('../img/metka.png') center center/cover no-repeat
+.general
+    display: flex
+    justify-content: center
+    align-items: center
+    &:before
+        content: ''
+        display: inline-block
+        margin-right: 5px
+        width: 19px
+        height: 20px
+.header__contacts_a1:before
+    background: url('../img/a1.png') center center/cover no-repeat
+.header__contacts_mts:before
+    background: url('../img/mts.png') center center/cover no-repeat
+.header__contacts_home:before
+    background: url('../img/home.png') center center/cover no-repeat
+.header__info>p:first-child
+    letter-spacing: 1px
+
+    // MENU
+.menu-active
+    background-color: #11554b
+.main-menu
+    min-height: 80px
+    background-color: #1e9382
+.container-menu
+    max-width: 1300px
+    margin: 0 auto
+.menu-list
+    height: 100%
+.caret
+    display: inline-block
+    width: 0
+    height: 0
+    margin-left: 2px
+    vertical-align: middle
+    border-top: 4px dashed
+    border-right: 4px solid transparent
+    border-left: 4px solid transparent
+    transform: rotate(-90deg)
+.transition-menu
+    transition: 1.5s
+.menu
+    position: relative
+    list-style-type: none
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 80px
+    padding: 0
+    &__item:hover
+        transition: 1s
+        background-color: rgba(0, 0, 0, 0.42)
+    &__item
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0 14px
+        cursor: pointer
+        height: 100%
+        &_text
+            display: block
+            font-size: 22px
+            color: #fff
+            font-weight: 500
+            letter-spacing: 1.2px
+        &_text2
+            padding: 0
+        &_visible:hover .menu-level2-hidden
+            display: block 
+            transition: 1s
+        &_visible:hover .caret
+            transform: rotate(0deg)
+            transition: .7s
+.text
+    color: #fff  
+.menu-level2
+    position: absolute
+    z-index: 1
+    top: 100%
+    left: 170px
+    background-color: #1e9382
+    list-style-type: none
+    padding-left: 0px 
+    &-item
+        padding: 15px 
+        &:hover
+            background-color: #11554b
+    &-hidden
+        display: none
+
+    //Slider
+
+.home-slider
+    width: 100%
+    height: 470px
+    margin: 0 auto
+.slider
+    width: inherit
+    height: inherit
+    &__size
+        width: inherit
+        height: 470px 
+    &__img1
+        background: url('../img/slaidimg1.jpg') center center/cover no-repeat
+    &__img2
+        background: url('../img/slaidimg2.jpg') center center/cover no-repeat
+    &__img3
+        background: url('../img/slaidimg3.jpg') center center/cover no-repeat
+
+    //information
+
+.information
+    min-height: 400px
+    margin-bottom: 80px
+    &__title
+        text-align: center
+        font-size: 38px
+        font-weight: 500
+        color: #1e9382
+        text-shadow: 1px 1px 1px #657078
+        margin: 0 auto
+        padding-top: 50px
+        width: 100%
+    &__title:after
+        content: ''
+        border: 1px solid #1e9382
+        display: block
+        width: 100%
+        max-width: 400px
+        margin: 2% auto
+    &__text
+        width: 100%
+        margin: 15px auto
+        font-size: 17px
+        font-weight: 400
+    &__btn
+        display: block
+        margin: 35px auto
+        width: 350px
+        height: 60px
+        border: 3px solid #1e9382
+        border-radius: 10px
+        &_text
+            color: #000
+            font-size: 19px
+            font-weight: 500
+    &__btn:hover
+        background-color: #1e9382
+    &__btn:hover .information__btn_text
+        color: #fff
+.transition-btn
+    transition: 3s
+
+    //Benefits
+
+.benefits-circle
+    display: inline-block
+    width: 60px
+    height: 60px
+    text-align: center
+    border: 3px solid #1e9382
+    border-radius: 50%
+    font-size: 38px
+    color: #1e9382
+    text-shadow: 1px 1px 1px #657078
+.benefits
+    min-height: 565px
+    &__title
+        text-align: center
+        font-size: 38px
+        color: #1e9382
+        text-shadow: 1px 1px 1px #657078
+        font-weight: 500
+        margin: 2% auto
+    &__list
+        width: 985px
+        margin: 0 auto
+    &__item
+        display: flex
+        margin: 30px
+        &_text
+            font-size: 38px
+            color: #1e9382
+            text-shadow: 1px 1px 1px #657078
+            margin-left: 25px
+.benefits-circle.animation1
+    transform: translate(-600%,0)
+    opacity: 0
+    transition: all 1s ease 0s
+.benefits__item_text.animation1
+    transform: translate(0,100%)
+    opacity: 0
+    transition: all 1s ease 0s
+.benefits-circle.animation1.active
+    transform: translate(0,0)
+    transition-delay: 2s
+    opacity: 1
+.benefits__item_text.animation1.active
+    transform: translate(0,0)
+    transition-delay: 3s
+    opacity: 1
+
+    // Services
+.services-wrapper
+    margin: 0 auto
+    display: flex
+    justify-content: space-evenly  
+.services
+    min-height: 600px
+    &__title
+        text-align: center
+        font-size: 38px
+        color: #1e9382
+        text-shadow: 1px 1px 1px #657078
+        font-weight: 500
+        margin: 2% auto
+    &__cards
+        min-height: 350px
+        width: 450px
+        background-color: rgba(196, 202, 201, 0.3)
+        box-shadow: 3px 3px 5px #9ba1a0
+        border-radius: 30px
+        &_ultrasound
+            background: url('../img/ultrasound.jpg') center center/cover no-repeat
+        &_holter
+            background: url('../img/holter.jpg') center center/cover no-repeat
+        &_detskayakardiologiya
+            background: url('../img/kardiologiya.png') center center/cover no-repeat
+        &_fz
+            width: 100%
+            height: 180px
+            border-top-left-radius: 30px
+            border-top-right-radius: 30px
+        &_title
+            text-align: center
+            font-size: 22px
+            font-weight: 400
+            color: #1e9382
+            text-shadow: 1px 1px 1px #657078
+            margin: 5%
+    &__button
+        display: block
+        width: 250px
+        margin: 0 auto
+
+$speed: 0.5s
+.btn-flip
+	opacity: 1
+	outline: 0
+	color: #fff
+	line-height: 40px
+	position: relative
+	text-align: center
+	letter-spacing: 1px
+	display: block
+	text-decoration: none
+	font-family: 'Open Sans'
+	text-transform: uppercase
+	&:hover
+		&:after
+			opacity: 1
+			transform: translateY(0) rotateX(0)
+		&:before
+			opacity: 0
+			transform: translateY(50%) rotateX(90deg)
+	&:after
+		top: 0
+		left: 0
+		opacity: 0
+		width: 100%
+		color: #fff
+		display: block
+		transition: $speed
+		position: absolute
+		background: #1e9382
+		content: attr(data-back)
+		transform: translateY(-50%) rotateX(90deg)
+	&:before
+		top: 0
+		left: 0
+		opacity: 1
+		color: #adadaf
+		display: block
+		padding: 0 30px
+		line-height: 40px
+		transition: $speed
+		position: relative
+		background: #45454a
+		content: attr(data-front)
+		transform: translateY(0) rotateX(0)
+
+.wrap 
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+.buttonprices
+    min-width: 300px
+    min-height: 60px
+    font-family: sans-serif
+    font-size: 22px
+    text-transform: uppercase
+    letter-spacing: 1.3px
+    font-weight: 700
+    color: #fff
+    background: #1e9382
+    background: #1e9382
+    border: none
+    border-radius: 1000px
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64)
+    transition: all 0.3s ease-in-out 0s
+    cursor: pointer
+    outline: none
+    position: relative
+    z-index: 1
+    margin: 8%
+    padding: 10px
+.buttonprices::before 
+    content: ''
+    border-radius: 1000px
+    min-width: calc(300px + 12px)
+    min-height: calc(60px + 12px)
+    border: 8px solid #1e9382
+    box-shadow: 0 0 60px rgba(30, 147, 130, 1)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    opacity: 0
+    transition: all .3s ease-in-out 0s
+.buttonprices:hover, .buttonprices:focus 
+    color: #45454a
+    transform: translateY(-6px)
+.buttonprices:hover::before,.buttonprices:focus::before 
+    opacity: 1
+.buttonprices::after 
+    content: ''
+    width: 30px
+    height: 30px
+    border-radius: 100%
+    border: 6px solid #1e9382
+    position: absolute
+    z-index: -1
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    animation: ring 1.5s infinite
+.buttonprices:hover::after, .buttonprices:focus::after 
+    animation: none
+    display: none
+@keyframes ring 
+  0% 
+    width: 30px
+    height: 30px
+    opacity: 1
+  100% 
+    width: 300px
+    height: 300px
+    opacity: 0
+
+    //MAP
+
+.map
+    height: 500px
+    &__style
+        width: 100%
+        height: 500px
+    //FOOTER
+.footer-wrapper
+    display: flex
+    justify-content: space-between
+.footer
+    padding: 25px 0 15px 0
+    min-height: 200px
+    background-color: #45454a
+    &__logo
+        display: flex
+        align-items: center
+        &_text
+            color: #fff
+            font-weight: 400
+            font-size: 38px 
+    &__contacts
+        &_title
+            color: #fff 
+            font-size: 20px
+        &_number
+            list-style-type: none
+            padding-left: 0
+            color: #95989c
+        &_tel
+            margin-top: 10px
+    &__info
+        margin-right: 25px
+        &_title
+            color: #fff 
+            font-size: 20px
+        &_schedule
+            margin-top: 5px
+            color: #95989c
+    &__group
+        &_title
+            color: #fff 
+            font-size: 20px
+    &-vk:hover
+        fill: #fff
+    &-ok:hover   
+        fill: #fff
+    &__bottom
+        border-top: 1px solid #53585e
+        margin-top: 10px
+        padding-top: 7px
+        text-align: center
+        &_copyright
+            color: #95989c
+            font-size: 12px
+
+    //SERVICES PAGE
+.cards-img__heart
+    background: url('../img/cards-img/heart.jpg') center center/cover no-repeat
+.cards-img__kidney
+    background: url('../img/cards-img/kidney.jpg') center center/cover no-repeat
+.cards-img__veins
+    background: url('../img/cards-img/veins.jpg') center center/cover no-repeat
+.cards-img__bcaartery
+    background: url('../img/cards-img/bca-artery.jpg') center center/cover no-repeat
+.cards-img__pelvis
+    background: url('../img/cards-img/pelvis.jpg') center center/cover no-repeat
+.cards-img__milkglands
+    background: url('../img/cards-img/milk-glands.jpg') center center/cover no-repeat
+.cards-img__thyroid
+    background: url('../img/cards-img/thyroid.jpg') center center/cover no-repeat
+.cards-img__kidneybladder
+    background: url('../img/cards-img/kidney-bladder.jpg') center center/cover no-repeat
+.cards-img__joints
+    background: url('../img/cards-img/joints.jpg') center center/cover no-repeat
+.cards-img__prostate
+    background: url('../img/cards-img/prostate.jpg') center center/cover no-repeat
+.cards-img__lymphnodes
+    background: url('../img/cards-img/lymph-nodes.jpg') center center/cover no-repeat
+.cards-img__salivaryglands
+    background: url('../img/cards-img/salivary-glands.jpg') center center/cover no-repeat
+.cards-img__spleen
+    background: url('../img/cards-img/spleen.jpg') center center/cover no-repeat
+.cards-img__pancreas
+    background: url('../img/cards-img/pancreas.jpg') center center/cover no-repeat
+.cards-img__liver
+    background: url('../img/cards-img/liver.jpg') center center/cover no-repeat
+.cards-img__softtissues
+    background: url('../img/cards-img/soft-tissues.jpg') center center/cover no-repeat
+.cards-img__lungs
+    background: url('../img/cards-img/lungs.jpg') center center/cover no-repeat
+.cards-img__brain
+    background: url('../img/cards-img/brain.jpg') center center/cover no-repeat
+.cards-img__macarons
+    background: url('../img/cards-img/macarons.jpg') center center/cover no-repeat
+.ultrasound
+    min-height: 600px
+    padding: 35px 0
+    &-wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+    &__title
+        font-size: 38px
+        color: #1e9382
+        text-shadow: 1px 1px 1px #657078
+        font-weight: 500
+        margin: 2% auto
+        text-align: center
+    &-block
+        display: flex
+        flex: 0 0 33%
+        justify-content: center
+        padding: 0 15px
+        &__cards
+            position: relative
+            cursor: pointer
+            width: 300px
+            height: 200px
+            border-radius: 35px
+            margin: 15px 0
+            transition: 1.5s
+            &:hover
+                transform: scale(1.1,1.1)
+                transition: 1.5s
+            &_text
+                display: block
+                text-align: center
+                height: inherit
+                background-color: #000
+                border-radius: 35px
+                opacity: 0.6
+                color: #fff
+                padding-top: 70px
+                font-size: 26px
+    //ФУНКЦИОНАЛЬНАЯ ДИАГНОСТИКА
+.cards-img__smad
+    background: url('../img/cards-img/smad.jpg') center center/cover no-repeat
+.cards-img__holterecg
+    background: url('../img/cards-img/holter-ecg.jpg') center center/cover no-repeat
+.cards-img__electrocardiogram
+    background: url('../img/cards-img/electrocardiogram.jpg') center center/cover no-repeat
+.functionaldiagnostics
+    min-height: 300px
+    padding-bottom: 75px
+    &__title
+        font-size: 38px
+        color: #1e9382
+        text-shadow: 1px 1px 1px #657078
+        font-weight: 500
+        text-align: center
+        margin: 2% auto
+    &-wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+    &-block
+        display: flex
+        flex: 0 0 33%
+        justify-content: center
+        padding: 0 15px
+        &__cards
+            position: relative
+            cursor: pointer
+            width: 300px
+            height: 200px
+            border-radius: 35px
+            margin: 15px 0
+            transition: 1.5s
+            &:hover
+                transform: scale(1.1,1.1)
+                transition: 1.5s
+            &_text
+                text-align: center
+                height: inherit
+                background-color: #000
+                border-radius: 35px
+                opacity: 0.6
+                color: #fff
+                padding-top: 70px
+                font-size: 26px
+.cardiolog
+    min-height: 700px
+    padding-bottom: 30px
+    &__title
+        font-size: 38px
+        color: #1e9382
+        text-shadow: 1px 1px 1px #657078
+        text-align: center
+        font-weight: 500
+        margin: 2% auto
+    &__foreword
+        font-family: 'Passions Conflict', cursive
+        margin-left: 40px
+        font-size: 22px
+    &__text
+        margin: 40px
+    &__text1
+        font-family: 'Passions Conflict', cursive
+        font-size: 22px 
+        text-indent: 30px
+        text-align: justify
+    &__textbig
+        font-family: 'Passions Conflict', cursive
+        font-size: 36px
+        font-weight: 700
+        color: #1e9382
+    &-img
+        width: 500px
+        height: 350px
+        margin-left: 15px
+        border-radius: 155px
+    &__causes
+        padding: 0 0 30px 0
+        &_title
+            text-align: center
+            font-size: 38px
+            color: #1e9382
+            text-shadow: 1px 1px 1px #657078
+            font-weight: 500
+            margin: 2% auto
+        &_text
+            font-size: 23px
+            li
+                font-family: 'Passions Conflict', cursive
+                padding-top: 10px
+    &__header
+        font-family: 'Passions Conflict', cursive
+        margin-top: 20px
+        font-size: 22px
+        font-weight: bold
+        &-text
+            font-family: 'Passions Conflict', cursive
+            font-size: 20px
+            margin: 5px 0 5px 0
+            font-weight: 400
+    &__info
+        padding: 20px 0
+        text-align: justify
+        font-size: 23px
+        font-family: 'Passions Conflict', cursive
+    &__footer
+        font-family: 'Passions Conflict', cursive
+        margin-top: 20px
+        font-size: 16px
+        font-weight: bold
+
+                    //PRICES new page
+.prices
+    margin: 50px 0
+    &__title
+        font-size: 38px
+        color: #1e9382
+        text-shadow: 1px 1px 1px #657078
+        margin: 5% 0
+        text-align: center
+        &:after 
+            content: ''
+            border: .5px solid #1e9382
+            display: block
+            width: 100%
+            max-width: 400px
+            margin: 2% auto
+    &__topical
+        background-color: #1e9382
+        font-size: 22px
+        font-weight: 500
+        padding: 22px 0 22px 15px
+        border-radius: 5px
+        color: #fff
+    &__table 
+        border-collapse: collapse
+        color: #686461
+        width: 100%
+        &-center
+            text-align: center
+        &-general
+            position: relative
+            font-size: 19px
+        &-general:before
+            content: ''
+            background: url('../img/prices-img/bracket.png') center center/cover no-repeat
+            position: absolute
+            left: 0
+            top: -13px
+            width: 42px
+            height: 53px
+            transform: rotate(180deg)
+    &__description
+        width: 800px
+        &-src
+            font-size: 14px
+            margin-left: 25px
+            margin-top: 5px
+        &-text
+            margin-top: 10px
+        &-strong
+            margin-top: 10px
+            font-size: 21px
+th 
+    border-bottom: 3px solid #B9B29F
+    padding: 10px
+    text-align: center
+    font-size: 1.2em
+    color: #346953
+td 
+    padding: 10px
+td b 
+    color:#ff0000
+tr:nth-child(odd) 
+    background: white
+tr:nth-child(even) 
+    background: #E8E6D1
+.table-sort thead > tr > th
+    cursor:pointer   
+
+        //unsurance new page
+
+.insurance
+    min-height: 750px
+    padding: 35px 0 35px 0
+    &-title
+        font-size: 28px
+        color: #1e9382
+        text-align: left
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        &_img
+            width: 460px
+            margin-top: 30px
+            &-size
+                width: 210px
+                height: 150px
+                margin-top: 20px
+                &:nth-child(even)
+                    margin-left: 15px
+                &:nth-child(3)
+                    height: 190px
+                    width: 230px
+                &:nth-child(4)
+                    margin: 0
+                    width: 210px
+                &:nth-child(5)
+                    width: 300px
+        &_text
+            margin-top: 35px
+            padding: 20px
+            width: 600px
+            height: 600px
+            border-radius: 40px
+            background-color: #fff
+            box-shadow: 0 14px 28px rgba(30,147,130,0.35), 0 10px 10px rgba(0,0,0,0.22)
+            &-title
+                text-align: center
+                font-size: 18px
+            &-list
+                ul
+                    li
+                        margin-top: 10px
+            &-info
+                padding-top: 25px
+                font-size: 22px
+                text-align: center
+    
+    // giftCertificate
+.certificate
+    min-height: 440px
+    padding: 0 0 25px 0
+    background: url('../img/fon_midl.png')
+    &-slider
+        width: 750px
+        height: 380px
+        margin: 0 auto
+        &-block
+            width: inherit
+            height: inherit
+        &__size
+            width: inherit
+            height: 470px 
+        &__img1
+            background: url('../img/GiftСertificates/certificate1rez.png') center center/cover no-repeat
+        &__img2
+            background: url('../img/GiftСertificates/certificate2rez.png') center center/cover no-repeat
+
+.giftCertidicate
+    padding: 0 0
+    min-height: 500px       
+    background: url('../img/fon_midl.png')
+    &__header
+        font-family: 'Passions Conflict', cursive
+        font-size: 20px
+        font-weight: 400
+        &-title
+            font-family: inherit 
+            color: #1e9382
+            font-weight: 700
+            font-size: 24px
+    &__list
+        margin: 20px 0 20px 0
+        &-text
+            font-family: 'Passions Conflict', cursive
+            padding: 5px 0 5px 0
+            font-size: 18px
+            font-weight: 400
+    &__decor
+        margin: 40px 0 20px 0
+        &-src
+            font-family: 'Passions Conflict', cursive
+            font-size: 22px
+            font-weight: 700
+        &-header
+            font-family: 'Passions Conflict', cursive
+            margin: 20px 0 0 0
+            padding: 10px
+            font-size: 18px
+            font-weight: 500
+            border-radius: 10px
+        &-bgcolor
+            border-radius: 10px
+        &-text
+            padding: 5px 0 5px 0
+            font-size: 18px
+            font-weight: 400
+        &-footer
+            margin: 20px 0 20px 0
+            font-size: 18px
+            font-weight: 500
+
+        // description
+.return
+    cursor: pointer
+    width: 300px
+    margin-bottom: 25px
+    margin-left: 30px
+    &-text
+        font-family: 'Passions Conflict', cursive
+        font-size: 24px
+        color: #1e9382
+        transition: 1.5s
+        font-weight: 500
+        &:hover
+            transform: scale(1.1,1.1)
+            transition: 1.5s
+             
+.descriptionHeartTitleStyle
+    font-size: 30px
+    font-weight: 600
+    text-align: center
+    color: #1e9382
+.descriptionNone
+    display: none
+.descriptionBlock
+    display: block
+.descriptionHeart
+    padding: 35px 0 35px 0
+    &-preparation
+        margin-top: 25px
+.descriptionHeart-block
+    min-height: 350px
+    &_img
+        width: 400px
+        height: 350px
+        border-radius: 50%
+        margin-right: 15px
+        object-fit: cover
+    &_text
+        margin: 15px
+        &_title
+            font-size: 28px
+            font-weight: 600
+            text-align: center
+            color: #1e9382
+        &_src
+            font-family: 'Passions Conflict', cursive
+            font-size: 22px
+            text-align: left
+            letter-spacing: .6px
+            margin: 15px
+.descriptionHeart-testimony
+    padding: 30px 0 0 0
+    &_text
+        font-size: 23px
+        letter-spacing: 0.5px
+        li
+            font-family: 'Passions Conflict', cursive
+            padding-top: 10px
+.descriptionHeart-discover
+    padding: 20px 0 30px 0
+    &_text
+        font-size: 23px
+        letter-spacing: 0.5px
+        li
+            font-family: 'Passions Conflict', cursive
+            padding-top: 10px
+.descriptionHeart-preparation
+    margin-top: 0 0 30px 0
+    &_text
+        font-family: 'Passions Conflict', cursive
+        font-size: 23px
+        li
+            font-family: 'Passions Conflict', cursive
+            padding-top: 10px
+        &-src
+            margin-top: 30px
+            text-decoration: underline
+
+    // DOKTORS
+.doctors
+    padding: 20px 0 30px 0
+    min-height: 1000px
+    &__title
+        text-align: center
+        font-size: 28px
+        font-weight: 500
+        color: #1e9382
+        text-shadow: 1px 1px 1px #657078
+        margin: 0 auto
+        padding-top: 50px
+        width: 750px
+        &:after
+            content: ''
+            border: 1px solid #1e9382
+            display: block
+            width: 100%
+            max-width: 400px
+            margin: 2% auto
+    &-wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: start
+        width: 100%
+        margin: 45px 0 0 0
+    &-block
+        cursor: pointer
+        width: 350px
+        height: 400px
+        padding: 20px
+        margin: 0 16px 0 16px
+        margin-bottom: 50px
+        background-color: #fff
+        box-shadow: 0 14px 28px rgba(30,147,130,0.35), 0 10px 10px rgba(0,0,0,0.22)
+        border-radius: 45px
+        &__img
+            display: block
+            width: 200px
+            height: 200px
+            margin: 0 auto
+        &__info
+            font-family: 'Roboto'
+            text-align: center
+            padding: 10px 0
+            &_fullname
+                font-size: 19px
+                color: #346953
+                font-weight: 900
+            &_ultrasaund
+                font-size: 19px
+                font-weight: 500
+            &_category
+                font-size: 18px
+                font-weight: 500px
+            &_experience
+                font-size: 18px
+                font-weight: 500px
+.header__cap
+    display: none
+.header__burger
+        display: none
+// VACANCIES
+
+.vacancies
+    min-height: 680px
+    padding: 25px 0 25px 0
+    &__title
+        text-align: center
+        font-size: 38px
+        font-weight: 500
+        color: #1e9382
+        text-shadow: 1px 1px 1px #657078
+        margin: 0 auto
+        padding-top: 10px
+        width: 100%
+    &__header
+      font-size: 28px
+      font-weight: 700
+      color: #1e9382
+      &-style
+        // text-decoration: underline
+        border: 3px solid #1e9382
+        border-top: 3px
+        border-left: 3px
+        border-right: 3px
+        text-transform: uppercase
+    &__info
+        &_city
+            font-size: 22px
+            font-weight: 700
+            margin-left: 25px
+        &_src
+            font-size: 22px
+            &-style
+                font-size: 22px
+                color: #1e9382
+                font-weight: 500
+    &__requirements
+        margin: 15px 0 15px 0
+        &_title
+            font-size: 27px
+            font-weight: 700
+            color: #1e9382 
+        &_src
+            font-size: 22px
+            margin-top: 10px
+    &__data
+        margin: 0 0 15px 0
+        &_title
+            font-size: 27px
+            font-weight: 700
+            color: #1e9382 
+        &_src
+            font-size: 22px
+            margin-top: 10px
+
+
+@media only screen and (max-width: 1200px)
+    .header__logo_link
+        h1
+            font-size: 38px
+    .container
+        padding: 0 5px 0 5px
+    .main-menu 
+        min-height: 70px   
+    .menu
+        height: 70px
+        &__item
+            &_text
+                font-size: 15px   
+        &-level2
+            left: 130px
+    .information
+        min-height: 300px
+        margin-bottom: 50px
+        &__text
+            padding: 0 25px 0 25px
+    .services-wrapper
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+    .services__cards
+        margin: 0 25px 25px 25px
+    .doctors-wrapper
+        justify-content: center
+    .insurance__wrapper_text
+        width: 500px
+    .insurance__wrapper_text-list
+        font-size: 15px
+    .insurance__wrapper_text-info
+        padding-top: 11px
+        font-size: 18px
+    .insurance-title
+        text-align: center
+
+@media only screen and (max-width: 992px)
+    .header__logo_img 
+        width: 116px
+        height: 91px
+    .header__logo_link
+        h1
+            font-size: 30px
+    .header__wrap_contacts
+        font-size: 14px
+    .header__info
+        font-size: 14px
+    .header__address
+        font-size: 14px
+    .main-menu 
+        min-height: 70px   
+    .menu
+        height: 70px
+        &__item
+            padding: 0 12px
+            &_text
+                font-size: 13px   
+        &-level2
+            left: 85px
+    .home-slider
+        height: 300px
+    .slider__size
+        height: 300px
+    .information__title
+        padding-top: 25px
+    .benefits 
+        min-height: 465px
+    .benefits__list
+        width: 100%
+    .benefits__item_text
+        font-size: 28px
+    .benefits-circle 
+        width: 50px
+        height: 50px
+        font-size: 30px
+    .map
+        height: 320px
+        &__style
+            height: 320px
+    .footer__logo_text
+        font-size: 26px
+    .footer__contacts_title 
+        color: #fff
+        font-size: 18px
+    .footer__info_title 
+        font-size: 18px
+    .footer__group_title
+        font-size: 18px
+    .ultrasound
+        min-height: 600px
+        padding: 2px 0
+    .descriptionHeart
+        padding: 35px 0 20px 0
+    .descriptionHeart-block
+        min-height: 290px
+    .descriptionHeart-block_img
+        width: 300px
+        height: 250px
+    .descriptionHeart-block_text_title
+        font-size: 25px
+    .descriptionHeartTitleStyle
+        font-size: 26px
+    .descriptionHeart-block_text_src
+        font-size: 20px
+        margin: 5px
+    .descriptionHeart-testimony_text
+        font-size: 20px
+    .descriptionHeart-discover_text
+        font-size: 20px
+    .descriptionHeart-preparation
+        margin-top: 5px
+    .descriptionHeart-preparation_text
+        font-size: 20px
+    .functionaldiagnostics
+        padding-bottom: 15px
+    .cardiolog__title
+        font-size: 34px
+    .cardiolog__foreword
+        font-size: 20px
+    .cardiolog-img
+        width: 400px
+        height: 250px
+    .cardiolog__text1
+        font-size: 20px
+    .cardiolog__causes_title
+        font-size: 30px
+    .cardiolog__text
+        margin: 20px 40px 20px 40px
+    .cardiolog__causes_text
+        font-size: 20px
+    .cardiolog__causes
+        padding: 0 0 10px 0
+    .cardiolog__info
+        font-size: 20px
+    .cardiolog__footer
+        margin-top: none
+    .insurance__wrapper_img-size:nth-child(1)
+        height: 130px
+        width: 180px
+    .insurance__wrapper_img-size:nth-child(2)
+        height: 150px
+        width: 200px
+    .insurance__wrapper_img-size:nth-child(3)
+        height: 130px
+        width: 180px
+    .insurance__wrapper_img-size:nth-child(4)
+        height: 120px
+        width: 180px
+    .insurance__wrapper_img-size:nth-child(5)
+        height: 100px
+        width: 200px
+    .insurance__wrapper_img
+        width: 100%
+    .insurance__wrapper
+        flex-direction: column-reverse
+        align-items: center
+    .insurance__wrapper_img
+        display: flex
+        flex-wrap: wrap
+        padding: 0 50px 0 50px
+        align-items: center
+        justify-content: center
+    .certificate-slider__img1
+        width: 700px
+        height: 500px  
+    .certificate-slider__img2
+        width: 700px
+        height: 500px 
+    .prices
+        margin: 25px 0 
+    .prices__title
+        font-size: 33px
+        margin: 3% 0
+    .prices__topical
+        background-color: #1e9382
+        font-size: 20px
+    .prices__description
+        width: 100%
+@media only screen and (max-width: 768px)
+    body.lock
+        overflow: hidden
+    .header
+        margin-top: 40px
+    .header__cap
+        position: fixed
+        top: 0
+        left: 0
+        display: block
+        width: 100%
+        height: 40px
+        background-color: #fff
+    .header__burger
+        display: block
+        position: absolute
+        width: 30px
+        height: 20px
+        right: 10px
+        top: 10px
+        position: fixed
+        z-index: 2
+    .header__burger:before,
+    .header__burger:after
+        content: ''
+        background-color: #1e9382
+        position: absolute
+        width: 100%
+        height: 2px
+        left: 0
+        transition: 1s
+    .header__burger:before
+        top: 0
+    .header__burger:after
+        bottom: 0
+    .header__burger
+        span
+            position: absolute
+            width: 100%
+            height: 2px
+            background-color: #1e9382
+            left: 0
+            top: 9px
+    .header__burger.active:before
+        transform: rotate(45deg)
+        top: 9px
+        transition: 1s
+    .header__burger.active:after
+        transform: rotate(-45deg)
+        bottom: 9px
+        transition: 1s
+    .header__burger.active span
+        transform: scale(0)
+    .header__info
+        display: none
+    .main-menu 
+        min-height: 0px
+    .caret
+        display: none
+    .menu__item_visible:hover .menu-level2-hidden
+        display: none   
+    .menu-list
+        position: fixed
+        top: -100%
+        left: 0
+        width: 100%
+        height: 100%
+        overflow: auto
+        background-color: #1e9382
+        z-index: 1
+        padding: 70px 0 0 0
+        transition: .4s
+    .menu-list.active
+        top: 0 
+    .menu
+        display: block
+    .header__cap
+        display: block
+        z-index: 2
+    .menu__item_text
+        font-size: 16px
+    // .header__logo_img
+    //     width: 76px
+    //     height: 51px
+    // .header__logo_link h1
+    //     font-size: 20px
+    // .general
+    //     font-size: 10px
+    // .general:before
+    //     width: 18px
+    //     height: 18px
+    // .header__info
+    //     font-size: 12px
+    // .header__address
+    //     font-size: 13px
+    // .information__title 
+    //     text-align: center
+    //     font-size: 20px
+    //     font-weight: 500
+    //     color: #1e9382
+    //     text-shadow: 1px 1px 1px #657078
+    //     margin: 0 auto
+    //     width: 100%
+    // .menu
+    //     height: 50px
+    //     &__item
+    //         padding: 0 6px
+    //         &_text
+    //             font-size: 9px   
+    //     &-level2
+    //         left: 65.5px
+    // .menu-level2-item
+    //     padding: 8px
+    // .main-menu
+    //     min-height: 50px
+    .slider__size
+        height: 215px
+    .home-slider
+        height: 216px
+    .information__title
+        padding-top: 10px
+    .information__btn
+        margin: 20px auto
+        width: 330px
+        height: 55px
+    .benefits__item_text
+        font-size: 22px
+    .benefits-circle
+        width: 45px
+        height: 45px
+        font-size: 27px
+    .services__cards
+        min-height: 340px
+        width: 400px
+    .buttonprices
+        min-width: 280px
+        margin: 5%
+    .wrap
+        padding-bottom: 25px
+    .footer__logo
+        display: flex
+        flex-direction: column
+        img
+            width: 96px
+            height: 76px
+    .footer__logo_text
+        font-size: 22px
+    .footer__contacts_title
+        color: #fff
+        font-size: 16px
+    .footer__contacts_number
+        font-size: 14px
+    .footer__info_title
+        font-size: 16px
+    .footer__info_schedule
+        font-size: 14px
+    .footer__group_title
+        font-size: 16px
+    .ultrasound__title
+        font-size: 30px
+    .functionaldiagnostics__title
+        font-size: 30px
+    .cardiolog__causes_title
+        font-size: 27px
+    .cardiolog__title
+        font-size: 30px
+    .descriptionHeart-block
+        display: flex
+        flex-direction: column-reverse 
+    .descriptionHeart-block_img
+        margin: auto
+        border-radius: 0
+        width: 100%
+    .cardiolog-img
+        display: none
+    .doctors__title
+        width: 100%
+    .certificate-slider__img1
+        width: 500px
+        height: 300px
+    .certificate-slider__img2
+        width: 500px
+        height: 300px
+    .certificate
+        min-height: 300px
+    .certificate-slider
+        height: 275px
+    .prices__title
+        font-size: 27px
+    .prices__topical
+        font-size: 15px
+    .prices__table
+        tr
+            font-size: 0.8rem
+    .prices__table-general:before
+        display: none
+    .prices__table-general
+        font-size: 1rem
+    .certificate
+        display: none
+    .giftCertidicate
+        padding-top: 50px
+    .vacancies__title
+        font-size: 28px
+@media only screen and (max-width: 480px)
+    body.lock
+        overflow: hidden
+    .header-wrap
+        display: flex
+        flex-direction: column
+    .header__address p
+        display: block
+        text-align: center
+    .header__address p:nth-child(2)
+        margin-top: 0
+    .header__cap
+        position: fixed
+        top: 0
+        left: 0
+        display: block
+        width: 100%
+        height: 40px
+        background-color: #fff
+    .header__burger
+        display: block
+        position: absolute
+        width: 30px
+        height: 20px
+        right: 10px
+        top: 10px
+        position: fixed
+        z-index: 2
+    .header__burger:before,
+    .header__burger:after
+        content: ''
+        background-color: #1e9382
+        position: absolute
+        width: 100%
+        height: 2px
+        left: 0
+        transition: 1s
+    .header__burger:before
+        top: 0
+    .header__burger:after
+        bottom: 0
+    .header__burger
+        span
+            position: absolute
+            width: 100%
+            height: 2px
+            background-color: #1e9382
+            left: 0
+            top: 9px
+    .header__burger.active:before
+        transform: rotate(45deg)
+        top: 9px
+        transition: 1s
+    .header__burger.active:after
+        transform: rotate(-45deg)
+        bottom: 9px
+        transition: 1s
+    .header__burger.active span
+        transform: scale(0)
+    .header__info
+        display: none
+    .main-menu 
+        min-height: 0px
+    .caret
+        display: none
+    .menu__item_visible:hover .menu-level2-hidden
+        display: none   
+    .menu-list
+        position: fixed
+        top: -100%
+        left: 0
+        width: 100%
+        height: 100%
+        overflow: auto
+        background-color: #1e9382
+        z-index: 1
+        padding: 70px 0 0 0
+        transition: .4s
+    .menu-list.active
+        top: 0 
+    .menu
+        display: block
+    .header__cap
+        display: block
+        z-index: 2
+    .menu__item_text
+        font-size: 16px
+    .benefits
+        min-height: 420px
+    .benefits__title
+        font-size: 32px
+    .benefits-circle
+        display: none
+    .benefits__item_text
+        font-size: 17px
+    .services__title
+        font-size: 32px
+    .services__cards
+        min-height: 320px
+        width: 360px
+    .services__cards_fz
+        height: 160px
+    .footer-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+    .footer__contacts_number
+        text-align: center
+    .footer__info
+        margin-right: 0
+        text-align: center
+    .cardiolog-img
+        margin: 0 5px
+    .insurance__wrapper_text
+        width: 315px
+        height: 673px
+    .insurance__wrapper_text-title
+        font-size: 14px
+    .insurance__wrapper_text-list
+        font-size: 12px
+    .insurance__wrapper_text-info
+        padding-top: 11px
+        font-size: 15px
+    .certificate-slider__img1
+        width: 450px
+        height: 300px
+    .certificate-slider__img2
+        width: 450px
+        height: 300px
+    .giftCertidicate__decor-src
+        font-size: 19px
+    .certificate-slider
+        width: 450px
+    .prices__title
+        font-size: 23px
+    .prices__table
+        tr
+            font-size: 0.7rem
+    .prices__table-general:before
+        width: 15px
+    .prices__table-general
+        font-size: 0.8rem
+    .prices__table-general:before
+        width: 11px
+        margin-top: -4px
+    .vacancies
+        padding: 0
+        min-height: 665px
+    .prices__description-strong
+        margin-top: 10px
+        font-size: 17px
+    .vacancies__title
+        font-size: 26px
+    .vacancies__header
+        font-size: 22px
+        font-weight: 500
+    .vacancies__info_src-style
+        font-size: 22px
+    .vacancies__requirements_title
+        font-size: 25px
+    .vacancies__requirements_src
+        font-size: 20px
+    .vacancies__data_title
+        font-size: 24px
+    .vacancies__data_src
+        font-size: 20px
+@media only screen and (max-width: 320px)
+    .header-wrap
+        display: flex
+        flex-direction: column
+    .header__address p
+        display: block
+        text-align: center
+    .header__address p:nth-child(2)
+        margin-top: 0
+    .slider__size
+        height: 160px
+    .home-slider
+        height: 160px
+    .information
+        margin-bottom: 20px
+    .information__title
+        font-size: 18px
+    .information__title:after
+        width: 88%
+    .information__text
+        text-align: center
+    .information__btn
+        margin: 15px auto
+        width: 280px
+        height: 45px
+    .information__btn_text
+        font-size: 16px
+    .benefits__title
+        font-size: 25px
+    .benefits-circle
+        display: none
+    .services__cards
+        min-height: 280px
+        width: 290px
+    .services__cards_fz
+        height: 135px
+    .services__cards_title
+        font-size: 19px
+    .services__button
+        display: block
+        width: 215px
+    .buttonprices
+        min-width: 250px
+    .buttonprices
+        min-height: 55px
+        font-size: 18px
+    .map
+        height: 220px
+        &__style
+            height: 220px
+    .footer-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+    .footer__contacts_number
+        text-align: center
+    .footer__info
+        margin-right: 0
+        text-align: center
+    .ultrasound__title
+        font-size: 22px
+    .return 
+        cursor: pointer
+        width: 225px
+    .return-text 
+        font-size: 18px
+    .descriptionHeart-block_img
+        height: 180px
+    .descriptionHeart-block_text_src
+        text-align: center
+    .descriptionHeartTitleStyle
+        font-size: 23px
+    .descriptionHeart-block_text_title
+        font-size: 22px
+    .descriptionHeartTitleStyle
+        font-size: 18px
+    .cardiolog__foreword
+        margin-left: 0px
+        text-align: center
+    .cardiolog__text1
+        text-align: center
+    .cardiolog__causes_title
+        font-size: 19px
+    .cardiolog__header
+        font-size: 17px
+    .cardiolog__info
+        text-align: center
+    .functionaldiagnostics-block
+        padding: 0px
+    .ultrasound-block
+        padding: 0px
+    .insurance__wrapper_text-info
+        font-size: 15px
+    .certificate 
+        min-height: 200px
+    .certificate-slider__img1
+        width: 280px
+        height: 200px
+    .certificate-slider__img2
+        width: 280px
+        height: 200px
+    .giftCertidicate__decor-src
+        font-size: 19px
+    .certificate-slider
+        width: 300px
+        height: 180px
+    .giftCertidicate__header-title
+        font-size: 16px
+    .giftCertidicate__header
+        font-size: 15px
+    .giftCertidicate__list-text
+        font-size: 15px
+    .giftCertidicate__decor-src
+        font-size: 16px
+    .giftCertidicate__decor-header
+        font-size: 16px
+    .giftCertidicate__decor-text
+        font-size: 15px
+    .giftCertidicate__decor-footer
+        font-size: 15px
+    .prices__title
+        font-size: 23px
+    .prices__table
+        tr
+            font-size: 0.6rem
+    .prices__table-general:before
+        width: 15px
+    .prices__table-general
+        font-size: 0.7rem
+    .prices__table-general:before
+        width: 10px
+        height: 38px
+        margin-top: 12px
+    .prices__description-strong
+        margin-top: 10px
+        font-size: 17px
+    .prices__table-center
+        padding: 9px    
+    .prices__description-text
+        font-size: .9rem
+    .prices__description-strong
+        font-size: 15px
